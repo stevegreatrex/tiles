@@ -12,11 +12,20 @@
     float: left;
 }
 
+.tile {
+    display: inline-block;
+    background-color: #404040;
+    color: #f0f0f0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
 .tile-sm {
     display: inline-block;
     background-color: #404040;
     color: #f0f0f0;
     overflow: hidden;
+    text-decoration: none;
     height: 150px;
 }
 
