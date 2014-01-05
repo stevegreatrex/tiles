@@ -2,12 +2,6 @@
 @tile-size-sm-inner: 130px;
 @tile-size-sm: @tile-size-sm-inner + (@tile-padding-sm * 2);
 
-.tile-list {
-    .tile {
-        float: left;
-    }
-}
-
 .one-line() {
     overflow: hidden;
     white-space: nowrap;
@@ -16,15 +10,39 @@
     text-overflow: ellipsis;
 }
 
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.tile-list {
+    .clearfix;
+    .tile {
+        float: left;
+    }
+}
+
 .tile-sm {
-    height: @tile-size-sm;
-    width: @tile-size-sm;
     display: inline-block;
     margin: 5px;
-    padding: @tile-padding-sm;
     background-color: #404040;
     color: #f0f0f0;
-    position: relative;
+    overflow: hidden;
+    height: @tile-size-sm;
+    
+    .tile-frame {
+        height: @tile-size-sm-inner;
+        width: @tile-size-sm;
+        margin: @tile-padding-sm;
+        position: relative;
+        overflow: hidden;
+    }
 
     &.tile-number {
         .value {
@@ -45,12 +63,15 @@
         display: block;
         max-height: @tile-size-sm * 0.8;
         overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
     }
 
     .label {
         position: absolute;
-        bottom: @tile-padding-sm;
-        right: @tile-padding-sm;
+        bottom: 0;
+        right: 0;
         width: @tile-size-sm-inner;
         text-align: right;
         .one-line;
