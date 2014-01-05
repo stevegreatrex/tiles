@@ -20,6 +20,14 @@
     height: 150px;
 }
 
+.tile-sm .tile-frame {
+    height: 130px;
+    width: 150px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
 .tile-sm.tile-number .value,
 .tile-sm .tile-number .value {
     font-size: 80px;
@@ -53,6 +61,20 @@
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
+}
+
+.tile-sm[data-frames='2'] .tile-frames {
+    -o-animation: scroll-sm-frames-2 5s ease-in infinite;
+    -moz-animation: scroll-sm-frames-2 5s ease-in infinite;
+    -webkit-animation: scroll-sm-frames-2 5s ease-in infinite;
+    animation: scroll-sm-frames-2 5s ease-in infinite;
+}
+
+.tile-sm[data-frames='3'] .tile-frames {
+    -o-animation: scroll-sm-frames-3 7.5s ease-in infinite;
+    -moz-animation: scroll-sm-frames-3 7.5s ease-in infinite;
+    -webkit-animation: scroll-sm-frames-3 7.5s ease-in infinite;
+    animation: scroll-sm-frames-3 7.5s ease-in infinite;
 }
 
 @-moz-keyframes scroll-sm-frames-2 {
@@ -121,17 +143,92 @@
     }
 }
 
-.tile-frame {
-    height: 130px;
-    width: 150px;
-    margin: 10px;
-    position: relative;
-    overflow: hidden;
+@-moz-keyframes scroll-sm-frames-3 {
+    0% {
+        margin-top: 0;
+    }
+
+    26% {
+        margin-top: 0;
+    }
+
+    32% {
+        margin-top: -140px;
+    }
+
+    58% {
+        margin-top: -140px;
+    }
+
+    64% {
+        margin-top: -280px;
+    }
+
+    90% {
+        margin-top: -280px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
 }
 
-[data-frames='2'] .tile-frames {
-    -o-animation: scroll-sm-frames-2 5s ease-in infinite;
-    -moz-animation: scroll-sm-frames-2 5s ease-in infinite;
-    -webkit-animation: scroll-sm-frames-2 5s ease-in infinite;
-    animation: scroll-sm-frames-2 5s ease-in infinite;
+@-webkit-keyframes scroll-sm-frames-3 {
+    0% {
+        margin-top: 0;
+    }
+
+    26% {
+        margin-top: 0;
+    }
+
+    32% {
+        margin-top: -140px;
+    }
+
+    58% {
+        margin-top: -140px;
+    }
+
+    64% {
+        margin-top: -280px;
+    }
+
+    90% {
+        margin-top: -280px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes scroll-sm-frames-3 {
+    0% {
+        margin-top: 0;
+    }
+
+    26% {
+        margin-top: 0;
+    }
+
+    32% {
+        margin-top: -140px;
+    }
+
+    58% {
+        margin-top: -140px;
+    }
+
+    64% {
+        margin-top: -280px;
+    }
+
+    90% {
+        margin-top: -280px;
+    }
+
+    100% {
+        margin-top: 0;
+    }
 }
