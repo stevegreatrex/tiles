@@ -81,6 +81,18 @@
         .one-line;
     }
 
+    .tile-icon {
+        @double-padding: @tile-padding-sm * 2;
+        @size: @tile-size-sm-inner - @double-padding * 2;
+        height: @size;
+        width: 100%;
+        font-size: @size;
+        line-height: @size;
+        text-align: center;
+        display: block;
+        margin-top: @double-padding;
+    }
+
     &[data-frames='2'] .tile-frames {
         -o-animation: scroll-sm-frames-2 5s ease-in infinite;
         -moz-animation: scroll-sm-frames-2 5s ease-in infinite;

@@ -72,6 +72,16 @@
     text-overflow: ellipsis;
 }
 
+.tile-sm .tile-icon {
+    height: 90px;
+    width: 100%;
+    font-size: 90px;
+    line-height: 90px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
 .tile-sm[data-frames='2'] .tile-frames {
     -o-animation: scroll-sm-frames-2 5s ease-in infinite;
     -moz-animation: scroll-sm-frames-2 5s ease-in infinite;
