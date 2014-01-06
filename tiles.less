@@ -1,6 +1,7 @@
 ﻿@tile-padding-sm: 10px;
 @tile-size-sm-inner: 130px;
 @tile-size-sm: @tile-size-sm-inner + (@tile-padding-sm * 2);
+@tile-background: #404040;
 
 .one-line() {
     overflow: hidden;
@@ -30,10 +31,14 @@
 
 .tile {
     display: inline-block;
-    background-color: #404040;
+    background-color: @tile-background;
     color: #f0f0f0;
     overflow: hidden;
     text-decoration: none;
+}
+
+a.tile:hover {
+    background-color: lighten(@tile-background, 10%);
 }
 
 .tile-sm {

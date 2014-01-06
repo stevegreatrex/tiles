@@ -20,6 +20,10 @@
     text-decoration: none;
 }
 
+a.tile:hover {
+    background-color: #5a5a5a;
+}
+
 .tile-sm {
     display: inline-block;
     background-color: #404040;
